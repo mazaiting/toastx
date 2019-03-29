@@ -1,3 +1,5 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.2] - 2019年3月29日
+修复 Toastx 显示之后无法点击空白处控件的问题.
 
-* TODO: Describe initial release.
+## [0.0.1] - 2019年3月28日
+使用 Overlay 显示 Toastx 功能完成.

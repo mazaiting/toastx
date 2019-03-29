@@ -59,21 +59,21 @@ class _MyHomePageState extends State<MyHomePage> {
                       Toastx.show(context, '底部2s',
                           duration: ToastxDuration.SHORT)
                     },
-                child: Text('底部'),
+                child: Text('底部2s'),
               ),
               FlatButton(
                 onPressed: () => {
                       Toastx.show(context, '底部5s',
                           duration: ToastxDuration.MIDDLE)
                     },
-                child: Text('底部'),
+                child: Text('底部5s'),
               ),
               FlatButton(
                 onPressed: () => {
                       Toastx.show(context, '底部10s',
                           duration: ToastxDuration.LONG)
                     },
-                child: Text('底部'),
+                child: Text('底部10'),
               )
             ],
           ),

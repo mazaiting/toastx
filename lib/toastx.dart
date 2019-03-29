@@ -43,34 +43,56 @@ class Toastx {
       TextStyle style}) {
     //创建一个OverlayEntry对象
     return OverlayEntry(builder: (context) {
-      //外层使用Positioned进行定位，控制在Overlay中的位置
-      return new Positioned(
-          top: MediaQuery.of(context).size.height *
-              _getLocation(location), // 设置距离顶部80%
-          child: new Material(
-            type: MaterialType.transparency, // 设置透明
-            child: new Container(
-              width: MediaQuery.of(context).size.width, // 设置宽度
-              alignment: Alignment.center, // 设置居中
-              child: new Center(
-                child: Container(
-                  constraints: BoxConstraints(
-                      maxWidth: MediaQuery.of(context).size.width *
-                          0.8), // 设置约束，最大宽度为屏幕宽的80%
-                  child: new Card(
-                    child: new Padding(
-                      padding: EdgeInsets.all(10),
-                      child: new Text(message, style: style),
-                    ),
-                    color: color,
-                    shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.all(Radius.circular(10))), // 设置圆角
-                  ),
-                ),
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.start, // 排列方向，从开始位置
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height *
+                    _getLocation(location)), // 使用 Margin 定位元素
+            constraints: BoxConstraints(
+                maxWidth: MediaQuery.of(context).size.width *
+                    0.8), // 设置约束，最大宽度为屏幕宽的80%
+            child: Card(
+              child: Padding(
+                padding: EdgeInsets.all(10), // 内边距设置
+                child: Text(message, style: style), // 字体样式
               ),
-            ),
-          ));
+              color: color,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10))), // 设置圆角
+            ), // 卡片布局
+          )
+        ],
+      );
+      //外层使用Positioned进行定位，控制在Overlay中的位置
+      // return Positioned(
+      //     top: MediaQuery.of(context).size.height *
+      //         _getLocation(location), // 设置距离顶部80%
+      //     child: Material(
+      //       type: MaterialType.transparency, // 设置透明
+      //       child: Container(
+      //         color: Colors.red,
+      //         width: MediaQuery.of(context).size.width, // 设置宽度
+      //         alignment: Alignment.center, // 设置居中
+
+      //         child: Container(
+      //           constraints: BoxConstraints(
+      //               maxWidth: MediaQuery.of(context).size.width *
+      //                   0.8), // 设置约束，最大宽度为屏幕宽的80%
+      //           child: Card(
+      //             child: Padding(
+      //               padding: EdgeInsets.all(10),
+      //               child: Text(message, style: style),
+      //             ),
+      //             color: color,
+      //             shape: RoundedRectangleBorder(
+      //                 borderRadius:
+      //                     BorderRadius.all(Radius.circular(10))), // 设置圆角
+      //           ),
+      //         ),
+      //       ),
+      //     ));
     });
   }
 

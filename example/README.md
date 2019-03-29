@@ -1,16 +1,53 @@
-# example
+# toastx_example
+toastx 使用示例.
 
-A new Flutter project.
+# toastx
 
-## Getting Started
+A Toast Plus of Flutter.
 
-This project is a starting point for a Flutter application.
+# 安装
 
-A few resources to get you started if this is your first Flutter project:
+1. 在 pubspec.yaml 中添加
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+```
+dependencies:
+  toastx: ^0.0.1
+```
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+2. 执行命令
+
+```
+  flutter packages get
+```
+
+3. 导入
+
+```
+import 'package:toastx/toastx.dart';
+```
+
+# 使用
+
+```
+# 顶部显示
+Toastx.show(context, '顶部', location: ToastxLocation.TOP);
+
+# 中部显示
+Toastx.show(context, '中部', location: ToastxLocation.CENTER);
+
+# 短时间显示
+Toastx.show(context, '底部2s', duration: ToastxDuration.SHORT);
+
+# 中等时间显示
+Toastx.show(context, '底部5s', duration: ToastxDuration.MIDDLE);
+
+# 长时间显示
+Toastx.show(context, '底部10s', duration: ToastxDuration.LONG);
+
+# 自定义显示背景
+Toastx.show(context, '红色背景', color: Colors.red);
+
+# 自定义显示字体风格
+Toastx.show(context, '字体', style: TextStyle(fontSize: 30);
+```
+

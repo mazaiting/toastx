@@ -1,6 +1,6 @@
 name: toastx
 description: A Toast Plus of Flutter.
-version: 0.0.1
+version: 0.0.2
 author: mazaiting <mazaiting@gmail.com>
 homepage: https://github.com/mazaiting/toastx
 
@@ -11,9 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
+# dev_dependencies:
+#   flutter_test:
+#     sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
